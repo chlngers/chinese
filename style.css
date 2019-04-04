@@ -1,0 +1,92 @@
+div {
+    font-family: Tahoma, Geneva, sans-serif;
+  }  
+h1 {
+    font-family: Tahoma, Geneva, sans-serif;
+  }
+h2 {
+    font-family: Tahoma, Geneva, sans-serif;
+  }
+a {
+    font-family: Tahoma, Geneva, sans-serif;
+  }  
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  div{
+                        font-size: 70px;
+                    }
+                    button{
+                        font-size: 50px;
+                    }
+                    h1{
+                        font-size: 70px;
+                    }
+                    h2{
+                        font-size: 60px;
+                    }
+                    a{
+                        font-size: 60px;
+                    }
+  
+}
+
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  div{
+                        font-size: 70px;
+                    }
+                    button{
+                        font-size: 50px;
+                    }
+                    h1{
+                        font-size: 70px;
+                    }
+                    h2{
+                        font-size: 60px;
+                    }
+                    a{
+                        font-size: 60px;
+                    }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  div{
+                        font-size: 70px;
+                    }
+                    button{
+                        font-size: 50px;
+                    }
+                    h1{
+                        font-size: 70px;
+                    }
+                    h2{
+                        font-size: 60px;
+                    }
+                    a{
+                        font-size: 60px;
+                    }
+  
+}
+
+#slowButton {
+    display: none;
+}
