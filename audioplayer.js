@@ -90,7 +90,7 @@ for(var i = 0; i < chinesePart.length*3; i++){
             var br = document.createElement('br');
             //td.setAttribute('rowspan','3');
             var button1 = document.createElement('button');
-            button1.appendChild(document.createTextNode("빠르게"));
+            button1.appendChild(document.createTextNode("play"));
             button1.setAttribute('onclick','playFast('+audioCounter+')')
 
             var audio1 = document.createElement('audio')

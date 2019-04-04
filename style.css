@@ -90,3 +90,7 @@ a {
 #slowButton {
     display: none;
 }
+
+.button {
+    font-size: 10px;
+}
