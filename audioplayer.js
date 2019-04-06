@@ -71,7 +71,7 @@ function createTable(num) {
     }
 
 
-    var body = document.getElementById('main')
+    var body = document.body;
         tbl = document.createElement('table');
     //tbl.style.border = '1px solid black';
 
