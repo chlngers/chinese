@@ -73,7 +73,7 @@ break;
 
 var body = document.body,
     tbl  = document.createElement('table');
-tbl.style.border = '1px solid black';
+//tbl.style.border = '1px solid black';
 
 var counter = 0;
 var chineseCounter =0;
@@ -84,14 +84,15 @@ var audioCounter = 0;
 for(var i = 0; i < chinesePart.length*3; i++){
     var tr = tbl.insertRow();
     for(var j = 0; j < 2; j++){
-        var td = tr.insertCell();
 
         if (i == counter && j!=1){
+            var td = tr.insertCell();            
             var br = document.createElement('br');
-            //td.setAttribute('rowspan','3');
+            td.setAttribute('rowspan','3');
             var button1 = document.createElement('button');
             button1.appendChild(document.createTextNode("play"));
             button1.setAttribute('onclick','playFast('+audioCounter+')')
+            button1.setAttribute('class','fastButton')
 
             var audio1 = document.createElement('audio')
             audio1.id = 'fastAudio' + audioCounter
@@ -119,6 +120,7 @@ for(var i = 0; i < chinesePart.length*3; i++){
         }
 
         if (j==1){
+            var td = tr.insertCell();            
             switch((i+3)%3){
                 case 0:
                     td.setAttribute("class","chinese")
@@ -137,7 +139,7 @@ for(var i = 0; i < chinesePart.length*3; i++){
                 break;
             }
         }
-        td.style.border = '1px solid black'
+        //td.style.border = '1px solid black'
     }
 }
 body.appendChild(tbl);
