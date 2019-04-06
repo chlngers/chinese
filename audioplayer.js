@@ -90,7 +90,11 @@ function createTable(num) {
                 var br = document.createElement('br');
                 td.setAttribute('rowspan', '3');
                 var button1 = document.createElement('button');
-                button1.appendChild(document.createTextNode("play"));
+                var icon = document.createElement("i");
+                icon.setAttribute('class', 'fas fa-play')
+                icon.setAttribute('style', 'font-size:12px;')
+                button1.appendChild(icon);
+                // button1.appendChild(document.createTextNode("play"));
                 button1.setAttribute('onclick', 'playFast(' + audioCounter + ')')
                 button1.setAttribute('class', "btn btn-warning fastButton")
 
