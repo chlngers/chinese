@@ -1,3 +1,10 @@
+function putTitle(num) {
+    var title = document.createElement('h2')
+    title.appendChild(document.createTextNode(titles[num-1]))
+    document.body.appendChild(title)
+
+}
+
 function playFast(num) {
     var audio = document.getElementById('fastAudio' + num);
     if (audio.paused) {
@@ -12,9 +19,22 @@ function playSlow(num) {
     if (audio.paused) {
         audio.play();
     } else {
-        audio.currentTime = 0
+        audio.currentTime = 0;
     }
 }
+
+function playAll() {
+
+    var originalAudio = document.getElementById('originalAudio');
+
+    if (originalAudio.paused) {
+        originalAudio.play();
+    } else {
+        originalAudio.pause();
+    }
+
+}
+
 
 function createTable(num) {
     switch (num) {
@@ -147,17 +167,19 @@ function createTable(num) {
         }
     }
     body.appendChild(tbl);
+
+    document.addEventListener('play', function (e) {
+        var audios = document.getElementsByTagName('audio');
+        for (var i = 0, len = audios.length; i < len; i++) {
+            if (audios[i] != e.target) {
+                audios[i].pause();
+                audios[i].currentTime = 0;
+            }
+        }
+    }, true);
+    
 }
 
-document.addEventListener('play', function (e) {
-    var audios = document.getElementsByTagName('audio');
-    for (var i = 0, len = audios.length; i < len; i++) {
-        if (audios[i] != e.target) {
-            audios[i].pause();
-            audios[i].currentTime = 0;
-        }
-    }
-}, true);
 
 function hide(text) {
     var elements = document.getElementsByClassName(text);
@@ -169,3 +191,4 @@ function hide(text) {
         }
     }
 }
+

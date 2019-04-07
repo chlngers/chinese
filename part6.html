@@ -5,21 +5,31 @@
     <meta charset="UTF-8">
     <script src="script.js"></script>
     <script src="audioplayer.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Chinese Challenge</title>
-    <h1>Part 6: 뉴스를 즐겨보나요? 왜 그런가요?</h1>
-    <a href="index.html">다른 지문으로 돌아가기</a>
-    <br>
-    <br>
 </head>
+
 <body>
+    <script>
+        putTitle(6)
+    </script>
+    <a href="index.html">다른 지문으로 돌아가기</a>
+    <p><span class="glyphicon glyphicon-play"></span></p>
     <button onclick="hide('pinyin')">병음 가리기</button>
     <button onclick="hide('korean')">해석 가리기</button>
+    <button onclick="playAll()">전체 플레이</button>
+    <audio id="originalAudio" src="original/6.mp3"></audio>
     <br>
     <br>
     <script>
         createTable(6);
     </script>
-   
+
 </body>
+
 </html>
